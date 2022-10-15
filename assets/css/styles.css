@@ -1,0 +1,104 @@
+:root {
+  --primary-color: orangered;
+  --background: #0b1219;
+  --container-bg: #101a25;
+  --btn-bg: #00000033;
+  --color-white: #fff;
+  --password-bg: #192839;
+}
+
+body {
+  background: var(--background);
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.password-container {
+  background: var(--container-bg);
+  padding: 1rem;
+  width: 380px;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.2);
+  color: var(--color-white);
+}
+
+.password-area {
+  background: var(--password-bg);
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+  height: 35px;
+  word-wrap: break-word;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  padding: 0 0.8rem;
+  border: none;
+  background: var(--btn-bg);
+  z-index: 99;
+  color: #a1a1a1;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+input {
+  color: #0b1219;
+}
+
+label {
+  cursor: pointer;
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  color: var(--color-white);
+  background: var(--danger-color);
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+#passLen {
+  width: 50px;
+}
+
+#msg {
+  width: 300px;
+  transform: translateY(-500px);
+  transition: transform 0.2s ease-in-out;
+}
+
+#msg.active {
+  transform: translateY(0);
+}
+
+#msg.error {
+  background-color: var(--danger-color-soft);
+  color: var(--danger-color);
+  border-left: 3px solid var(--danger-color);
+}
+
+#msg.success {
+  background-color: var(--success-color-soft);
+  color: var(--success-color);
+  border-left: 3px solid var(--success-color);
+}
